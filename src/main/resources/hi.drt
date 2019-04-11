@@ -1,0 +1,20 @@
+template header
+str
+output
+
+package com.tbitsglobal.service;
+
+global com.tbitsglobal.service.Result hi;
+
+template "example"
+
+rule "example_@{row.rowNumber}"
+salience 1
+when
+	Pojo(@{str})
+	
+then
+	hi.@{output};
+end
+
+end template
